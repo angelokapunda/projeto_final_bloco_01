@@ -2,12 +2,14 @@ package adega.model;
 
 public abstract class Bebida {
 
+    private int id ;
     private String nome;
     private String fabricante;
     private int volume;
     private float preco;
 
-    public Bebida(String fabricante, String nome, float preco, int volume) {
+    public Bebida (int id, String fabricante, String nome, float preco, int volume) {
+        this.id  = id;
         this.fabricante = fabricante;
         this.nome = nome;
         this.preco = preco;
@@ -16,15 +18,17 @@ public abstract class Bebida {
 
     public void mostrarInformacoes() {
         System.out.printf("""
+                
                 *********************************
                            --Bebida--
                 *********************************
+                Id : %d
                 Nome : %s
                 Fabricante : %s
                 Volume : %d
                 Preco : %.2f
                 """,
-                nome, fabricante, volume, preco);
+                id, nome, fabricante, volume, preco);
     }
 
     public String getFabricante() {
@@ -57,5 +61,9 @@ public abstract class Bebida {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public int getId() {
+        return id;
     }
 }

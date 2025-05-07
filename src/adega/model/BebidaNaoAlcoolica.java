@@ -4,9 +4,8 @@ public class BebidaNaoAlcoolica extends Bebida{
 
     private String contemAcucar;
 
-
-    public BebidaNaoAlcoolica(String fabricante, String nome, float preco, int volume, String contemAcucar) {
-        super(fabricante, nome, preco, volume);
+    public BebidaNaoAlcoolica(int id, String fabricante, String nome, float preco, int volume, String contemAcucar) {
+        super(id, fabricante, nome, preco, volume);
         this.contemAcucar = contemAcucar;
     }
 
